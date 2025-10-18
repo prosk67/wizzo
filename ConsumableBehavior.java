@@ -1,4 +1,4 @@
-public class ConsumableBehavior implements IItemBehavior {
+public class ConsumableBehavior extends IItemBehavior {
     @Override
     public void use() {
         System.out.println("Using consumable item.");

@@ -1,4 +1,4 @@
-public class WeaponBehavior implements IItemBehavior {
+public class WeaponBehavior extends IItemBehavior {
     @Override
     public void use() {
         System.out.println("Using weapon item.");

@@ -1,4 +1,4 @@
-public class WandBehavior implements IItemBehavior {
+public class WandBehavior extends IItemBehavior {
     @Override
     public void use() {
         System.out.println("Casting a spell with the wand.");

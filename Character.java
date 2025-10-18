@@ -7,7 +7,7 @@ public class Character {
     public int health;
     public int attackPower;
     public List<Item> items;
-
+    public boolean hasBag = false;
     public Character(ICharacterBehavior character,String name, int health, int attackPower) {
         this.character = character;
         this.name = name;
@@ -16,14 +16,19 @@ public class Character {
         this.items = new ArrayList<Item>();
     }
     public void addItem(Item item) {
+        if(item.itemBehavior.getClass().getName() == "ContainerBehavior"){
+            hasBag = true;
+            System.out.println(item);
+        }
+        
         if(items.size() >= 2) {
-            System.out.println("Cannot add more items. Inventory full.");
-            return;
-        }
-        boolean isAdded = items.add(item);
-        if(!isAdded) {
-            System.out.println("Failed to add item.");
-        }
+            if(hasBag) {
+                items.add(item);
+            }else   
+                System.out.println("Cannot add more items. Inventory full.");
+        }else
+            items.add(item);
+        
     }
     public void dropItem(Item item) {
         if(items.contains(item)) {

@@ -1,4 +1,5 @@
-public interface IItemBehavior {
-    void use();
-    void discard();
+public abstract class IItemBehavior {
+    
+    abstract void use();
+    abstract void discard();
 }

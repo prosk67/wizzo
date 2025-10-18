@@ -7,5 +7,4 @@ public class Item {
         this.price = price;
         this.name = name;
     }
-
 }
