@@ -10,7 +10,8 @@ public class Main {
 
         Item sword = new Item(new WeaponBehavior(), 50.0, "Sword");
         Item bag = new Item(new ContainerBehavior(), 0, "Bag");
-        Item potion = new Item(new ConsumableBehavior(), 5.0, "Health Potion");
+        Item potion = new Item(new WeaponBehavior(), 5.0, "Health Potion");
+        Item pen = new Item(new WeaponBehavior(), 1.0, "Magic Pen");
         wizard.addItem(sword);
         wizard.addItem(bag);
         wizard.addItem(potion);
