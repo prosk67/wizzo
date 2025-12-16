@@ -2,7 +2,7 @@ public class Singleton {
     public static Singleton singletonInstance;
     public int associatedValue;
 
-    Singleton(){
+    private Singleton(){
         this.associatedValue = 0;
     }
 
